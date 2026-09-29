@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--- Page Title-->
+    <title>Technova Solutions - Employee Portal Login</title>
+    
+    
+    <style>
+                  /* page background styling using a light tint */    
+        body{background-color: #deecfb;
+        font-family:Arial;
+        color: #368ce7;
+        margin-top: 50px;
+        }
+                 /* centered table layout with medium tone border */
+            table{
+                border: 2px solid #1666ba;
+                border-collapse: collapse;
+                background-color: #bedaf7;
+                width: 350px;
+            }
+           /* Header section with dark shade background */
+            thead{
+                background-color: #368ce7;
+                color: #deecfb;                    
+            }
+             /* Header text allignment and spacing */
+            h2{
+                margin: 0;
+                padding: 12px;
+                font-size: 20px;
+            }
+            /*Table body cell padding for labels and inputs */
+            tbody td{
+                padding: 12px 16px;
+                font-weight: bold;                
+            }
+                /*Input field styling using light tint and medium tone border */
+            input{ 
+                width: 90%;
+                padding: 8px;
+                border: 1px solid #368ce7;
+                border-radius: 4px;
+                background-color: #bedaf7;
+            }
+            /*  Footer cells centering and padding */
+            tfoot td{
+                text-align: center;
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+                /*Primary action button [Submit] With dark shade background*/
+            input[type= "Submit"]{
+                background-color: #368ce7;
+                color: #deecfb;
+                border: none;
+                padding: 8px 16px;
+                margin-right: 5px;
+                cursor: pointer;
+                width: auto;
+            }
+                /*Secondary action button [Reset] With dark shade background */
+                input[type = "Reset"]{
+                    background-color:#1666ba;
+                    color:#deecfb;
+                    border: none;
+                    padding: 8px 16px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    width: auto;
+            }
+            
+    </style>
+</head>
+<body>
+    <!---Main HTML Form containing the centered layout-->
+    <form action="#" method = "post">
+        <table align="center">
+
+            <!---Header Section Displaying the portal title across 2 columns-->
+            <thead>
+                <tr>
+                    <th colspan = "2">
+                        <h2>Portal Login</h2>
+                    </th>
+                </tr>
+            </thead>
+        <!-- Main Body Section Containing input feilds-->
+            <tbody>
+                <!--Row 1: Username Input-->
+                <tr>
+                    <td><label for ="username">Username:</label></td>
+                    <td>
+                         <input type = "text" id = "username" name = "username" placeholder="Enter Username"> 
+                    </td>
+                </tr>
+                <!--Row 2: Password Input-->
+                <tr>
+                    <td><label for = "password">Password:</label></td>
+                    <td>
+                        <input type = "password" id = "password" name ="password" placeholder="Enter Password"required>
+
+                    </td>
+                </tr>
+            </tbody>
+            <!--Footer Section containing form buttons and student credits-->
+            <tfoot>
+                <!--Row 1: action controls-->
+                <tr>
+                    <td colspan="2">
+                        <input type = "Submit" value ="Submit">
+                        <input type = "Reset" value = "Reset">
+                    </td>
+                </tr>
+                <!--Row 2: Student Attribution Metadata-->
+                <tr>
+                    <td colspan = "2">
+                           Created by:[Julius Ceazar S. Bergado]-[12]-[Cooper] 
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form> 
+</body>
+</html>
