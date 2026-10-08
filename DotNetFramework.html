@@ -13,10 +13,16 @@
         }
 
         header {
-            background-color: #1b4d3e;
+            background-color: #1b4d3e; /* Base Forest Green */
             color: white;
             padding: 25px 20px;
             text-align: center;
+            border-bottom: 4px solid #e07a5f; /* Complementary Coral accent border */
+        }
+
+        header p {
+            color: #d4a373; /* Warm Bronze highlight text */
+            font-weight: 600;
         }
 
         nav {
@@ -31,11 +37,12 @@
             text-decoration: none;
             padding: 8px 18px;
             font-weight: bold;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         nav a:hover {
-            background-color: #1b4d3e;
+            background-color: #e07a5f; /* Complementary Coral hover background */
+            color: white;
             border-radius: 4px;
         }
 
@@ -56,8 +63,12 @@
             background-color: #ffffff;
             padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #2e7d60;
+            border-left: 4px solid #e07a5f; /* Complementary Coral border accent */
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        aside h3 {
+            color: #1b4d3e;
         }
 
         article {
@@ -66,6 +77,11 @@
             border-radius: 8px;
             margin-bottom: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-top: 3px solid #2e7d60;
+        }
+
+        article h2 {
+            color: #1b4d3e;
         }
 
         footer {
@@ -74,13 +90,14 @@
             text-align: center;
             padding: 15px;
             margin-top: 30px;
+            border-top: 3px solid #e07a5f;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Julius Bergado | .NET Framework Developer</h1>
+        <h1>Alex Cruz | .NET Framework Developer</h1>
         <p>Grade 12 Cooper - Web Development Showcase</p>
     </header>
 
@@ -116,8 +133,6 @@
     <footer>
         <p>&copy; 2026 TechCooper Solutions | Teacher: Ma'am Jovy</p>
     </footer>
-<center>
-   <a href = "index.html"> Home </a>
-  </center>
+
 </body>
 </html>
