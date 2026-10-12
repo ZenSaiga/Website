@@ -1,0 +1,23 @@
+th,td,tr {
+    padding: 10px 20px 15px 5px;
+}
+
+button[type="button"] {
+    padding: 10px 16px;
+    background-color: rgb(173, 173, 173);
+    color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+    border-style: outset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    padding: 10px 25px;
+    background-color: rgb(173, 173, 173);
+    color: rgb(0, 0, 0);
+    border: rgb(0, 0, 0);
+    border-style: outset;
+    border-radius: 5px;
+    cursor: pointer;
+}
