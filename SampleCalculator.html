@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Calculator</title>
+  <link rel="stylesheet" href="sample-calculator-style.css">
+  <script src="sample-calculation.js" defer></script>
+</head>
+<body>
+  <center>
+    <h1>Sample Calculator</h1>
+
+    <form>
+      <table border="3">
+        <tr>
+          <td><label for="txtFirst">First Number:</label></td>
+          <td><input type="number" id="txtFirst" name="txtFirst" placeholder="Enter first number" required></td>
+        </tr>
+        <tr>
+          <td><label for="txtSecond">Second Number:</label></td>
+          <td><input type="number" id="txtSecond" name="txtSecond" placeholder="Enter second number" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button onclick="getSum()" id="txtResults" type="button">Compute</button></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button type="reset">Reset</button></td>
+        </tr>
+      </table>
+    </form>
+    <br>
+    <a href="index.html">Home</a>
+  </center>
+</body>
+</html>
