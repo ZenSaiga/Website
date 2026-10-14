@@ -1,54 +1,66 @@
+/* Ito ang nag-didikta ng background color para sa navigation bar */
 .navbar {
- background-color: #1B365D; /* Primary Navy */
- width: 100%;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #065524	;
+    /* Primary Navy */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .nav-list {
- display: flex; /* Nag-a-ayos ng mga item nang magkatabi pahiga */
- flex-direction: row; /* ito ay nags-start mula kaliwa hanggang kanan*/
- justify-content: flex-start; /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
- align-items: center; /* Inilalagay sa center ang mga item sa navigation list */
- list-style-type: none; /* Tinatanggal ang mga bullet point sa listahan */
- margin: 0; /* Inaalis ang mga default na margin sa browser */
- padding: 0; /* Inaalis ang mga default na padding sa browser */
+ display: flex;                  /* Nag-a-ayos ng mga item nang magkatabi pahiga */
+ flex-direction: row;           /* ito ay nags-start mula kaliwa hanggang kanan*/
+ justify-content: flex-start;   /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
+ align-items: center;           /* Inilalagay sa center ang mga item sa navigation list */
+ list-style-type: none;         /* Tinatanggal ang mga bullet point sa listahan */
+ margin: 0;                     /* Inaalis ang mga default na margin sa browser */
+ padding: 0;                    /* Inaalis ang mga default na padding sa browser */
 }
 
 .nav-link {
- display: block; /* Ito ay yung pinapalawak ang clickable na box para mapunan ang padding*/
- padding: 14px 20px; /* Naglalagay ng espasyo sa loob ng target box  */
- color: #FFFFFF; /* Naglalagay ng kulay sa mga text */
- text-decoration: none; /* Inaalis ang mga standard underline */
- font-family: 'Segoe UI', sans-serif;
- font-size: 15px;
- font-weight: 600;
- transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;             /* Ito ay yung pinapalawak ang clickable na box para mapunan ang padding*/
+    padding: 14px 20px;         /* Naglalagay ng espasyo sa loob ng target box  */
+    color: #FFFFFF;           /* Naglalagay ng kulay sa mga text */
+    text-decoration: none;      /* Inaalis ang mga standard underline */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    justify-content: center; 
+    align-items: center;
 }
-/* 1. Unvisited default link state */
+
+/* Ito ang default link state na color */
 .nav-link:link {
- color: #FFFFFF;
+    color: #FFFFFF;
 }
-/* 2. Visited link state */
+
+/* Ito ang unvisited link state */
 .nav-link:visited {
- color: #E0E0E0;
+    color: #E0E0E0;
 }
-/* 3. Mouse hover state */
+
+/* Ito ang mouse hover state */
 .nav-link:hover {
- background-color: #005A9C;
- color: #FFFFFF;
+    background-color: #1e833e;
+    color: #FFFFFF;
 }
-/* 4. Keyboard focus state (Accessibility / WCAG compliance) */
+
+/* Ito ang keyboard focus na state */
 .nav-link:focus {
- outline: 3px solid #FFC107;
- outline-offset: -3px;
- background-color: #004080;
+    outline: 3px solid #1e833e;
+    outline-offset: -3px;
+    background-color: #1e833e;
 }
-/* 5. Active click-press state */
+
+/* Ito ang active-click press state */
 .nav-link:active {
- background-color: #002B55;
- transform: translateY(1px);
+    background-color: #328b4e;
+    transform: translateY(1px);
 }
-/* 6. Current page highlight class */
+
+/* Ito ang page-highlight class */
 .nav-link.active {
- background-color: #005A9C;
- border-bottom: 4px solid #FFC107;
+    background-color: #328b4e;;
+    border-bottom: 4px solid #ff6207;
 }
+
