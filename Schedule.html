@@ -1,216 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScheduleTest</title>
-    <style>
-        /* General page styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Table container */
-        .table-container {
-            width: 100%;
-            max-width: 950px;
-            background: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            margin-top: 20px;
-        }
-
-        /* Table styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            table-layout: fixed; /* Ensures uniform column widths */
-        }
-
-        /* Table header styling */
-        thead th {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 14px 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-            text-align: center;
-            border: 1px solid #2c3e50;
-        }
-
-        /* Column width adjustments */
-        thead th:first-child {
-            width: 15%;
-        }
-
-        /* Table cell styling */
-        tbody td {
-            padding: 12px 10px;
-            color: #333333;
-            border: 1px solid #e0e0e0;
-            font-size: 14px;
-            text-align: center;
-            vertical-align: middle;
-            word-wrap: break-word;
-        }
-
-        /* Teacher styling */
-        .teacher { 
-            font-weight: bold; 
-            font-style: italic; 
-            color: rgb(238, 0, 0);
-            margin-top: 4px;
-        }
-
-        /* Highlight rows like Arrival/Break/Departure */
-        .highlight-row {
-            background-color: #ffff00 !important;
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        /* Alternating row colors for unspanned cells */
-        tbody tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        tbody tr:nth-child(odd) {
-            background-color: #ffffff;
-        }
-
-        /* Hover effect for better interactivity */
-        tbody tr:hover {
-            background-color: #edf2f7;
-            transition: background-color 0.2s ease;
-        }
-    </style>
+  <title>Class Schedule</title>
 </head>
 <body>
-    <h1 style="text-align: center; margin-bottom: 5px;">COOPER CLASS SCHEDULE</h1>
-    
-    
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>TIME</th>
-                    <th>MON</th>
-                    <th>TUE</th>
-                    <th>WED</th>
-                    <th>THU</th>
-                    <th>FRI</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- ARRIVAL -->
-                <tr class="highlight-row">
-                    <td>12:30 pm</td>
-                    <td colspan="5">ARRIVAL</td>
-                </tr>
 
-                <!-- JAVA BLOCK (12:30 PM - 2:10 PM) -->
-                <tr>
-                    <td>12:30-1:20 PM</td>
-                    <td colspan="5" rowspan="2">
-                        <div>Computer Programming Java</div>
-                        <div class="teacher">DE VERA</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1:20-2:10 PM</td>
-                </tr>
+  <h1 style="text-align: center;"><b>Grade-12 Cooper Schedule</b></h1>
 
-                <!-- 2:10 PM - 3:00 PM -->
-                <tr>
-                    <td>2:10-3:00 PM</td>
-                    <td colspan="2">
-                        <div>Pagsulat sa Filipino sa Piling Larang</div>
-                        <div class="teacher">ODONO</div>
-                    </td>
-                    <td colspan="3">
-                        <div>Entrepreneurship</div>
-                        <div class="teacher">PAEZ</div>
-                    </td>
-                </tr>
+  <table border="1" width="100%">
+    <thead>
+      <tr>
+        <th>TIME</th>
+        <th>MONDAY</th>
+        <th>TUESDAY</th>
+        <th>WEDNESDAY</th>
+        <th>THURSDAY</th>
+        <th>FRIDAY</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- ARRIVAL -->
+      <tr align="center">
+        <td>12:30 PM<br>(10mins)</td>
+        <td colspan="5"><i><b>ARRIVAL</b></i></td>
+      </tr>
 
-                <!-- BREAK -->
-                <tr class="highlight-row">
-                    <td>3:00-3:15 PM</td>
-                    <td colspan="5">BREAK</td>
-                </tr>
+      <!-- 12:30 - 2:10 PM -->
+      <tr align="center">
+        <td>12:30 -1:20 PM</td>
+        <td colspan="5" rowspan="2">Computer Programming Java<br><i><b>DE VERA</b></i></td>
+      </tr>
+      <tr align="center">
+        <td>1:20-2:10 PM</td>
+      </tr>
 
-                <!-- 3:15 PM - 4:05 PM -->
-                <tr>
-                    <td>3:15-4:05 PM</td>
-                    <td style="background-color: #b0c4de;">
-                        <div>Homeroom Guidance</div>
-                        <div class="teacher">MANTALA</div>
-                    </td>
-                    <td rowspan="3">
-                        <div>English for Academic and Professional Purposes</div>
-                        <div class="teacher">MANTALA</div>
-                    </td>
-                    <td rowspan="2">
-                        <div>Pagsulat sa Filipino sa Piling Larang</div>
-                        <div class="teacher">ODONO</div>
-                    </td>
-                    <td rowspan="2">
-                        <div>Physical Education and Health 4</div>
-                        <div class="teacher">DEMEGILLO</div>
-                    </td>
-                    <td>
-                        <div>Entrepreneurship</div>
-                        <div class="teacher">PAEZ</div>
-                    </td>
-                </tr>
+      <!-- 2:10-3:00 PM -->
+      <tr align="center">
+        <td>2:10-3:00 PM</td>
+        <td colspan="2">Pagsulat sa Filipino sa Piling Larang<br><i><b>ODONO</b></i></td>
+        <td colspan="3">Entrepreneurship<br><i><b>PAEZ</b></i></td>
+      </tr>
 
-                <!-- 4:05 PM - 4:55 PM -->
-                <tr>
-                    <td>4:05-4:55 PM</td>
-                    <td rowspan="2">
-                        <div>English for Academic and Professional Purposes</div>
-                        <div class="teacher">MANTALA</div>
-                    </td>
-                    <!-- TUE, WED, THU are occupied by rowspans from above -->
-                    <td>
-                        <div>Pagsulat sa Filipino sa Piling Larang</div>
-                        <div class="teacher">ODONO</div>
-                    </td>
-                </tr>
+      <!-- BREAK -->
+      <tr align="center">
+        <td>3:00-3:15 PM<br>(15 Mins)</td>
+        <td colspan="5"><i><b>BREAK</b></i></td>
+      </tr>
 
-                <!-- 4:55 PM - 5:45 PM -->
-                <tr>
-                    <td>4:55-5:45 PM</td>
-                    <!-- MON is occupied by EAPP (rowspan=2) -->
-                    <!-- TUE is occupied by EAPP (rowspan=3) -->
-                    <td>
-                        <div>Entrepreneurship</div>
-                        <div class="teacher">PAEZ</div>
-                    </td>
-                    <td colspan="2">VACANT / OPEN</td>
-                </tr>
+      <!-- 3:15-4:05 PM -->
+      <tr align="center">
+        <td>3:15-4:05 PM</td>
+        <td>Homeroom Guidance<br><i><b>MANTALA</b></i></td>
+        <!-- Tuesday EAPP merged down across 3 periods (3:15 PM to 5:45 PM) -->
+        <td rowspan="3">English for Academic and Professional Purposes<br><i><b>MANTALA</b></i></td>
+        <!-- Wednesday Pagsulat sa Filipino merged down for 2 periods -->
+        <td rowspan="2">Pagsulat sa Filipino sa Piling Larang<br><i><b>ODONO</b></i></td>
+        <!-- Thursday PE merged down for 2 periods -->
+        <td rowspan="2">Physical Education and Health 4<br><i><b>DEMEGILLO</b></i></td>
+        <td>Entrepreneurship<br><i><b>PAEZ</b></i></td>
+      </tr>
 
-                <!-- DEPARTURE -->
-                <tr class="highlight-row">
-                    <td>5:45 pm</td>
-                    <td colspan="5">DEPARTURE</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <center>
+      <!-- 4:05-4:55 PM -->
+      <tr align="center">
+        <td>4:05-4:55 PM</td>
+        <!-- Monday EAPP spans 4:05 PM to 5:45 PM -->
+        <td rowspan="2">English for Academic and Professional Purposes<br><i><b>MANTALA</b></i></td>
+        <td>Pagsulat sa Filipino sa Piling Larang<br><i><b>ODONO</b></i></td>
+      </tr>
+
+      <!-- 4:55-5:45 PM -->
+      <tr align="center">
+        <td>4:55-5:45 PM</td>
+        <td>Entrepreneurship<br><i><b>PAEZ</b></i></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <!-- DEPARTURE -->
+      <tr align="center">
+        <td>5:45 pm</td>
+        <td colspan="5"><i><b>DEPARTURE</b></i></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+   <center>
     <a href = "index.html">Home</a>
     </center>
-</body>
 </html>
