@@ -1,72 +1,71 @@
-[
-  {
+{
     "lrn": 100111,
     "name": "Jethro Rosales",
     "age": 99,
     "section": "Cooper",
-    "image": "jethro.png"
+    "image": "images/jethro.png"
   },
   {
     "lrn": 100112,
     "name": "Prince Paglinawan",
     "age": 67,
     "section": "Cooper",
-    "image": "prince.png"
+    "image": "images/prince.png"
   },
   {
     "lrn": 100113,
     "name": "Dale Peralta",
     "age": 99,
     "section": "Cooper",
-    "image": "dale.png"
+    "image": "images/dale.png"
   },
   {
     "lrn": 100114,
     "name": "Railey Salugao",
     "age": 99,
     "section": "Cooper",
-    "image": "rai.png"
+    "image": "images/rai.png"
   },
   {
     "lrn": 100115,
     "name": "Vaughn Cruz",
     "age": 99,
     "section": "Cooper",
-    "image": "Vaughn.png"
+    "image": "images/Vaughn.png"
   },
   {
     "lrn": 100116,
     "name": "Nyt Concepcion",
     "age": 67,
     "section": "Cooper",
-    "image": "Nyt.png"
+    "image": "images/Nyt.png"
   },
 {
     "lrn": 100117,
     "name": "Ziantino Dela Cruz",
     "age": 76,
     "section": "Cooper",
-    "image": "Ziantino.png"
+    "image": "images/Ziantino.png"
   },
   {
     "lrn": 100118,
     "name": "Kiane Bauto",
     "age": 76,
     "section": "Cooper",
-    "image": "Bauto.png"
+    "image": "images/Bauto.png"
   },
   {
     "lrn": 100119,
     "name": "Lance Maliksi",
     "age": 67,
     "section": "Cooper",
-    "image": "lance.png"
+    "image": "images/lance.png"
   },
 {
     "lrn": 100120,
     "name": "John Erson Jamero",
     "age": 67,
     "section": "Cooper",
-    "image": "Erson.png"
+    "image": "images/Erson.png"
   }
 ]
