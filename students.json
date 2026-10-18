@@ -1,0 +1,72 @@
+[
+  {
+    "lrn": 100111,
+    "name": "Jethro Rosales",
+    "age": 99,
+    "section": "Cooper",
+    "image": "jethro.png"
+  },
+  {
+    "lrn": 100112,
+    "name": "Prince Paglinawan",
+    "age": 67,
+    "section": "Cooper",
+    "image": "prince.png"
+  },
+  {
+    "lrn": 100113,
+    "name": "Dale Peralta",
+    "age": 99,
+    "section": "Cooper",
+    "image": "dale.png"
+  },
+  {
+    "lrn": 100114,
+    "name": "Railey Salugao",
+    "age": 99,
+    "section": "Cooper",
+    "image": "rai.png"
+  },
+  {
+    "lrn": 100115,
+    "name": "Vaughn Cruz",
+    "age": 99,
+    "section": "Cooper",
+    "image": "Vaughn.png"
+  },
+  {
+    "lrn": 100116,
+    "name": "Nyt Concepcion",
+    "age": 67,
+    "section": "Cooper",
+    "image": "Nyt.png"
+  },
+{
+    "lrn": 100117,
+    "name": "Ziantino Dela Cruz",
+    "age": 76,
+    "section": "Cooper",
+    "image": "Ziantino.png"
+  },
+  {
+    "lrn": 100118,
+    "name": "Kiane Bauto",
+    "age": 76,
+    "section": "Cooper",
+    "image": "Bauto.png"
+  },
+  {
+    "lrn": 100119,
+    "name": "Lance Maliksi",
+    "age": 67,
+    "section": "Cooper",
+    "image": "lance.png"
+  },
+{
+    "lrn": 100120,
+    "name": "John Erson Jamero",
+    "age": 67,
+    "section": "Cooper",
+    "image": "Erson.png"
+  }
+]
