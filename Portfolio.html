@@ -5,7 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    #links{
+            width: 90%;
+            display: block;
+            margin: 10px auto;
+            color: #c46314;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid #c55c16;
+            border-radius: 4px;
+            text-align: center;
+        }
+    .box{
+        color:rgb(194, 92, 33);
+        font-size: 1.5rem;
+    }
+    .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1em;
+    }
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: whitesmoke;
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100px;
+    }
+        </style>
 </head>
+
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
@@ -17,18 +52,17 @@
         </ul>
     </nav>
     <br>
-    <center>
-        <a href="FormElements.html">Form Elements</a><br>
-        <a href="PortalLogin.html">Login</a><br>
-        <a href="Sample.html">Console Example</a><br>
-        <a href="SampleCalculator.html">Sample Calculator</a><br>
-        <a href="DiscountCalculator.html">Discount Calculator</a><br>
-        <a href="DotNetFramework.html">.NET Developer Profile</a><br>
-        <a href="Schedule.html">Class Schedule</a><br>
-        <a href="ScheduleStyled.html">Class Schedule Styled</a><br>
-        <a href="StudentArray.html">Student Array Drill</a><br>
-        <a href="Grid.html">Grid Drill</a><br>
-         <a href="LoginLogic.html">Login Logic Drill</a><br>
-    </center>
-</body>
+    <main class="container">
+     <a href="FormElements.html" id="links" class="box"><h3>Form Element</h3></a> 
+     <a href="PortalLogin.html" id="links" class="box"><h3>Login</h3></a>  
+     <a href="Sample.html" id="links" class="box"><h3>Console Example</h3></a>
+     <a href="SampleCalculator.html" id="links" class="box"><h3>Sample Calculator</h3></a>
+     <a href="DiscountCalculator.html" id="links" class="box"><h3>Discount Calculator</h3></a>  
+     <a href="DotNetFramework.html" id="links" class="box"><h3>.NET Developer Profile</h3></a>  
+     <a href="Schedule.html" id="links" class="box"><h3>Class Schedule</h3></a>
+     <a href="ScheduleStyled.html" id="links" class="box"><h3>Class Schedule Styled</h3></a>
+     <a href="StudentArray.html" id="links" class="box"><h3>Student Array Drill</h3></a>
+     <a href="Grid.html" id="links" class="box"><h3>Grid Drill</h3></a>
+     <a href="LoginLogic.html" id="links" class="box"><h3>Login Logic Drill</h3></a> 
+    </main>
 </html>
