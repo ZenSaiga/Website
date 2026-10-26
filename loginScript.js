@@ -5,7 +5,7 @@ function compareLogin(event){
     const PASSWORD = "1234";
     const userName = document.getElementById("username").value;
     const passWord = document.getElementById("password").value;
-    const errorMessage = document.getElementById("errorMessage").value;
+    const errorMessage = document.getElementById("errorMessage");
     if(userName === USERNAME && passWord === PASSWORD){
         alert("Nice");
         window.location.href = "message.html";
