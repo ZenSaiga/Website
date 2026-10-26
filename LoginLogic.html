@@ -5,21 +5,127 @@
     <meta name="viewport" content="width=s, initial-scale=1.0">
     <title>Document</title>
      <script src = "loginScript.js" defer></script>
+       <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px; 
+        }
+
+        
+        .login-card {
+            background-color: #ffffff;
+            border: 2px solid #ff007f; 
+            width: 100%;
+            max-width: 380px;
+            padding: 30px;
+            position: relative;
+        }
+
+        
+        .home-link-top {
+            display: block;
+            text-align: left;
+            color: #87ceeb; 
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .home-link-top:hover {
+            text-decoration: underline;
+        }
+
+      
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    
+        h2 {
+            color: #c46314; 
+            font-size: 2rem;
+            margin-bottom: 24px;
+            font-weight: bold;
+        }
+
+
+        .inputField {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 14px;
+            border: 1px solid #c55c16;
+            font-size: 15px;
+            outline: none;
+            color: darkslategray;
+        }
+
+        .inputField::placeholder {
+            color: darkslategray;
+        }
+
+        .inputField:focus {
+            border-color: green;
+        }
+
+    
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: rgb(26, 151, 26); 
+            color: darkgreen; 
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #errorMessage {
+            color: #ff0000;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
    <div>
     <form>
-        <center>
         <h2>Login</h2>
         <input type="text" id ="username" class ="inputField" placeholder="Username">
         <input type= "password" id = "password" class = "inputField" placeholder="Password">
+        <div class = "button-group">
         <button id ="btnLogIn">Submit</button>
         <button type ="reset">Reset</button>
+        </div>
         <p id = "errorMessage"></p>
-              <a href="index.html">Home</a><br>
-            </center>
     </form>
    </div>
-    
+    <center>
+   <a href = "index.html">Home</a>
+   </center>
 </body>
 </html>
