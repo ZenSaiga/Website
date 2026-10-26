@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
-    <title>Document</title>
-     <script src = "loginScript.js" defer></script>
-       <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="loginScript.js" defer></script>
+    <style>
         body {
             background-color: #ffffff;
             font-family: Arial, sans-serif;
@@ -13,19 +13,34 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 40px; 
+            padding-top: 60px; 
+            margin: 0;
+            box-sizing: border-box;
         }
         
-        form {
+
+        .login-card {
+            background-color: #ffffff;
+            border: 2px solid #c55c16;
+            padding: 40px;
+            width: 320px;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-    
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
         h2 {
             color: #c46314; 
             font-size: 2rem;
+            margin-top: 0;
             margin-bottom: 24px;
             font-weight: bold;
         }
@@ -38,6 +53,7 @@
             font-size: 15px;
             outline: none;
             color: darkslategray;
+            box-sizing: border-box;
         }
 
         .inputField::placeholder {
@@ -48,11 +64,11 @@
             border-color: #c55c16;
         }
 
-    
         .button-group {
             display: flex;
             gap: 10px;
             margin-top: 5px;
+            width: 100%;
         }
 
         button {
@@ -64,6 +80,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: opacity 0.2s ease;
+            flex: 1;
         }
 
         button:hover {
@@ -73,25 +90,28 @@
         #errorMessage {
             color: #ff0000;
             margin-top: 15px;
+            margin-bottom: 0;
             font-size: 14px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-   <div>
-    <form>
-        <h2>Login</h2>
-        <input type="text" id ="username" class ="inputField" placeholder="Username">
-        <input type= "password" id = "password" class = "inputField" placeholder="Password">
-        <div class = "button-group">
-        <button id ="btnLogIn">Submit</button>
-        <button type ="reset">Reset</button>
-        </div>
-        <p id = "errorMessage"></p>
-    </form>
-   </div>
-    <center>
-   <a href = "index.html">Home</a>
-   </center>
+
+    <div class="login-card">
+        <form>
+            <h2>Login</h2>
+            <input type="text" id="username" class="inputField" placeholder="Username">
+            <input type="password" id="password" class="inputField" placeholder="Password">
+            <div class="button-group">
+                <button id="btnLogIn" type="button">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+            <p id="errorMessage"></p>
+        </form>
+    </div>
+    
+    <a href="index.html">Home</a>
+
 </body>
 </html>
