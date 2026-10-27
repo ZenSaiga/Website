@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Matching Drag-and-Drop Game</title>
+    <link rel="stylesheet" href="DragAndDropCss.css">
+</head>
+<body>
+
+    <div class="game-header">
+        <h1>Match the Word</h1>
+        <p><strong>Instructions:</strong> Drag each word to its correct definition box below!</p>
+    </div>
+
+    <div class="draggable-container">
+        <div class="box" draggable="true" id="word1">Brave</div>
+        <div class="box" draggable="true" id="word2">Ancient</div>
+        <div class="box" draggable="true" id="word3">Swift</div>
+        <div class="box" draggable="true" id="word4">Huge</div>
+         <div class="box" draggable="true" id="word5">Heart</div>
+    </div>
+
+    <div class="droppable-container">
+        <div class="dropable" drop-zone="word2">Very old or from a long time ago.</div>
+        <div class="dropable" drop-zone="word4">Extremely large in size or area.</div>
+        <div class="dropable" drop-zone="word1">Ready to face danger; showing courage.</div>
+        <div class="dropable" drop-zone="word3">Moving very fast or quick.</div>
+        <div class="dropable" drop-zone="word5">The body's muscular pump that circulates blood.</div>
+    </div>
+
+    <div class="display">
+        <p>Remarks: <span id="remarks">Drag a word to start!</span></p>
+        <p>Score: <span id="scores">0</span> / 5</p>
+    </div>
+    <script src="DragAndDropjs.js"></script>
+    <center>
+     <a href="index.html">Home</a>
+     </center>
+</body>
+
+</html>
