@@ -23,7 +23,7 @@ body {
 .nav-list {
    display: flex;               /* Nag-a-ayos ng mga item nang magkatabi pahiga */
    flex-direction: row;         /* ito ay nags-start mula kaliwa hanggang kanan*/
-   justify-content: flex-start; /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
+   justify-content: center;     /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
    align-items: center;         /* Inilalagay sa center ang mga item sa navigation list */
    list-style-type: none;       /* Tinatanggal ang mga bullet point sa listahan */
    margin: 0;                   /* Inaalis ang mga default na margin sa browser */
