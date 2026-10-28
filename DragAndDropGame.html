@@ -3,51 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Matching Drag-and-Drop Game</title>
+    <title>History Timeline Drag-and-Drop Game</title>
+    
     <link rel="stylesheet" href="DragAndDropCss.css">
 </head>
 <body>
 
-    <div class="game-header">
-        <h1>Match the Word</h1>
-        <p><strong>Instructions:</strong> Drag each word to its correct definition box below!</p>
+    <h1>History Timeline Challenge</h1>
+    <h3 class="instructions">Drag each historical event to its correct chronological year slot!</h3>
+    <p class="p">This game is for the high school students who loves Philippine's History!</p>
+
+   
+    <div class="game-status">
+        <span id="remarks">Status: Let's play!</span>
+        <span id="scores">Score: 0 / 10</span>
     </div>
 
-    <div class="draggable-container">
-        <div class="box" draggable="true" id="word1">Brave</div>
-        <div class="box" draggable="true" id="word2">Ancient</div>
-        <div class="box" draggable="true" id="word3">Swift</div>
-        <div class="box" draggable="true" id="word4">Huge</div>
-        <div class="box" draggable="true" id="word5">Heart</div>
-        <div class="box" draggable="true" id="word7">Luminous</div>
-        <div class="box" draggable="true" id="word9">Resilient</div>
-        <div class="box" draggable="true" id="word10">Bucket</div>
-        <div class="box" draggable="true" id="word8">Diligent</div>
-        <div class="box" draggable="true" id="word6">Curious</div>
-
+    <h3>Historical Events Pool</h3>
+    <div class="dragable-container" id="pool">
+        <div class="box" draggable="true" id="item1">Magellan arrives in PH</div>
+        <div class="box" draggable="true" id="item2">Battle of Mactan</div>
+        <div class="box" draggable="true" id="item3">Declaration of PH Independence</div>
+        <div class="box" draggable="true" id="item4">Cry of Pugad Lawin</div>
+        <div class="box" draggable="true" id="item5">EDSA People Power Revolution</div>
+        <div class="box" draggable="true" id="item6">End of World War II</div>
+        <div class="box" draggable="true" id="item7">Rizal writes Noli Me Tangere</div>
+        <div class="box" draggable="true" id="item8">Establishment of Katipunan</div>
+        <div class="box" draggable="true" id="item9">First Philippine Republic (Malolos)</div>
+        <div class="box" draggable="true" id="item10">Execution of Gomburza</div>
     </div>
 
-    <div class="droppable-container">
-        <div class="dropable" drop-zone="word2">Very old or from a long time ago.</div>
-        <div class="dropable" drop-zone="word4">Extremely large in size or area.</div>
-        <div class="dropable" drop-zone="word1">Ready to face danger; showing courage.</div>
-        <div class="dropable" drop-zone="word3">Moving very fast or quick.</div>
-        <div class="dropable" drop-zone="word5">The body's muscular pump that circulates blood.</div>
-        <div class="dropable" drop-zone="word6">Eager to know or learn something.</div>
-        <div class="dropable" drop-zone="word7">Emitting or reflecting bright light, glowing..</div>
-        <div class="dropable" drop-zone="word8">Having or showing care and conscientiousness in one's work or duties.</div>
-        <div class="dropable" drop-zone="word9">Able to withstand or recover quickly from difficult conditions.</div>
-        <div class="dropable" drop-zone="word10">A handled container used for carrying liquids or materials.</div>
 
+    <h3>Chronological Year Slots </h3>
+    <div class="dropable-container">
+        <div class="dropable" id="drop1" drop-zone="item1"><span>1521</span></div>
+        <div class="dropable" id="drop2" drop-zone="item2"><span>1521 (Battle)</span></div>
+        <div class="dropable" id="drop3" drop-zone="item7"><span>1887</span></div>
+        <div class="dropable" id="drop4" drop-zone="item10"><span>1872</span></div>
+        <div class="dropable" id="drop5" drop-zone="item8"><span>1892</span></div>
+        <div class="dropable" id="drop6" drop-zone="item4"><span>1896</span></div>
+        <div class="dropable" id="drop7" drop-zone="item3"><span>1898 (June)</span></div>
+        <div class="dropable" id="drop8" drop-zone="item9"><span>1899</span></div>
+        <div class="dropable" id="drop9" drop-zone="item6"><span>1945</span></div>
+        <div class="dropable" id="drop10" drop-zone="item5"><span>1986</span></div>
     </div>
 
-    <div class="display">
-        <p>Remarks: <span id="remarks">Drag a word to start!</span></p>
-        <p>Score: <span id="scores">0</span> / 10</p>
-    </div>
-    <script src="DragAndDropjs.js"></script>
-    <center>
-     <a href="index.html">Home</a>
-     </center>
+    <button class="reset-btn" onclick="resetGame()">Reset Game</button>
+
+    <script src="tryjs.js"></script>
 </body>
 </html>
