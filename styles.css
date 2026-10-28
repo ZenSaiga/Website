@@ -63,4 +63,15 @@
     background-color: #328b4e;;
     border-bottom: 4px solid #ff6207;
 }
+footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1b4d3e;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-top: 3px solid #e07a5f;
+  }
 
