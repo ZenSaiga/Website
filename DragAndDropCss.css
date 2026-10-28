@@ -1,91 +1,135 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 30px;
-    background-color: #f4f7f6;
-    color: #333;
+    background: #f4ecd8; 
     text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: #2c1d11;
 }
 
-.game-header {
+h1 {
+    color: #5c3a21;
+    margin-bottom: 5px;
+}
+
+.instructions {
+    color: #6b4f3b;
     margin-bottom: 20px;
 }
 
-.draggable-container {
-    background-color: #ffffff;
-    border: 2px solid #1ca010;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.p {
+    color:#6b4f3b;
 }
 
-.droppable-container {
-    background-color: #ffffff;
-    border: 2px solid #d46810;
-    border-radius: 8px;
+
+.game-status {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#remarks {
+    color: #b71c1c;
+    margin-right: 20px;
+}
+
+#scores {
+    color: #0d47a1;
+}
+
+
+.dragable-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
+    background: #fffaf0;
+    border: 2px solid #8d6e63;
     padding: 15px;
-    margin-bottom: 20px;
+    border-radius: 8px;
+    max-width: 950px;
+    margin: 0 auto 25px auto;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+.dropable-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background: #eedcc5;
+    border: 2px solid #6d4c41;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1050px;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
 .box {
-    background-color: #f1b07a;
-    color: #c9770c;
-    font-weight: bold;
-    height: 60px;
-    width: 120px;
+    width: 150px;
+    height: 65px;
+    background: #d7ccc8;
+    color: #3e2723;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    border-radius: 5px;
     cursor: grab;
-    border: 1px solid #b95f0b;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-}
-
-.box:hover {
-    background-color: #d4e6f1;
-}
-
-.dropable {
-    background-color: #63bb28;
-    color: #435308;
-    font-size: 14px;
-    height: 90px;
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    font-weight: bold;
+    font-size: 0.8rem;
     text-align: center;
-    margin: 5px;
-    border: 2px dashed #d46810;
-    border-radius: 5px;
+    user-select: none;
+    border: 1px solid #8d6e63;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.box:active {
+    cursor: grabbing;
 }
 
 .dragging {
     opacity: 0.4;
 }
 
-.display {
-    font-size: 18px;
-    background-color: #ffffff;
-    padding: 15px;
+
+.dropable {
+    width: 160px;
+    height: 120px;
+    border: 2px dashed #5d4037;
+    background: #fffcf5;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #4e342e;
 }
 
-#remarks {
+.dropable span {
+    margin-bottom: 5px;
+    font-size: 0.85rem;
     font-weight: bold;
-    color: #27ae60;
+    color: #827717;
 }
-#remarks.incorrect {
-    color: #ca1717;
+
+
+.reset-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.reset-btn:hover {
+    background: #6d4c41;
 }
