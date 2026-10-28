@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop API</title>
+    <link rel="stylesheet" href="DragAndDropSample.css">
+</head>
+<body>
+
+    <div class="draggable-container">
+        <div class="box" draggable="true" id="box1">Fries</div>
+        <div class="box" draggable="true" id="box2">Bread</div>
+        <div class="box" draggable="true" id="box3">Egg</div>
+        <div class="box" draggable="true" id="box4">Me</div>
+    </div>
+
+    <div class="droppable-container">
+        <div class="dropable" drop-zone="box1">Potato</div>
+        <div class="dropable" drop-zone="box2">Flour</div>
+        <div class="dropable" drop-zone="box3">Chicken</div>
+        <div class="dropable" drop-zone="box4">You</div>
+    </div>
+
+    <div class="display">
+        <p>Remarks: <span id="remarks"></span></p>
+        <p>Score: <span id="scores">0</span></p>
+    </div>
+    <script src="DragAndDropSample.js"></script>
+    <a href = "index.html">home</a>
+</body>
+</html>
