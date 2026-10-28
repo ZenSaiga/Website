@@ -1,51 +1,61 @@
+
 const draggableElements = document.querySelectorAll('.box');
 const droppableElements = document.querySelectorAll('.dropable');
 
 let score = 0;
+const totalItems = 10; 
+
 
 draggableElements.forEach(element => {
-    element.addEventListener('dragstart', (event) => {
-        event.dataTransfer.setData('text/plain', event.target.id);
-        event.target.classList.add('dragging');
+    element.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData("text", e.target.id);
+        e.target.classList.add('dragging');
     });
 
-    element.addEventListener('dragend', (event) => {
-        event.target.classList.remove('dragging');
+    element.addEventListener('dragend', (e) => {
+        e.target.classList.remove('dragging');
     });
 });
 
-droppableElements.forEach(zone => {
-    zone.addEventListener('dragover', (event) => {
-        event.preventDefault();
+droppableElements.forEach(dropZone => {
+    dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
     });
 
-    zone.addEventListener('drop', (event) => {
-        event.preventDefault();
-        const draggedElementId = event.dataTransfer.getData('text/plain');
-        const targetDropZoneID = event.target.getAttribute('drop-zone');
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const draggedId = e.dataTransfer.getData("text");
+        const correctItemId = dropZone.getAttribute('drop-zone'); 
 
-        const remarksDisplay = document.getElementById('remarks');
-        const scoresDisplay = document.getElementById('scores');
+        if (dropZone.querySelector('.box')) {
+            document.getElementById('remarks').innerText = "Status: This year slot already has an event!";
+            return;
+        }
 
-        
-        if (draggedElementId === targetDropZoneID) {
-            remarksDisplay.classList.remove('incorrect'); 
-            remarksDisplay.innerText = "Tama (Correct!)";
+        if (draggedId === correctItemId) {
+            dropZone.appendChild(document.getElementById(draggedId));
             
-            if (!event.target.querySelector(`#${draggedElementId}`)) {
-                score += 1;
-                scoresDisplay.innerText = score;
-                
-                const draggedElement = document.getElementById(draggedElementId);
-                event.target.appendChild(draggedElement);
-            }
+            score += 1;
+            document.getElementById('remarks').innerText = "Status: Tama! Correct historical match.";
+            document.getElementById('scores').innerText = `Score: ${score} / ${totalItems}`;
 
-            if (score === 5) {
-                remarksDisplay.innerText = "Congratulations! You matched all words!";
+            if (score === totalItems) {
+                document.getElementById('remarks').innerText = "Status: Congratulations! All historical events matched correctly!";
             }
         } else {
-            remarksDisplay.classList.add('incorrect'); 
-            remarksDisplay.innerText = "Mali (Incorrect)! Try again.";
+            document.getElementById('remarks').innerText = "Status: Mali! Incorrect timeline match. Try again.";
         }
     });
 });
+
+function resetGame() {
+    score = 0;
+    document.getElementById('scores').innerText = `Score: ${score} / ${totalItems}`;
+    document.getElementById('remarks').innerText = "Status: Game reset. Match the history events!";
+
+    const pool = document.getElementById('pool');
+    
+    draggableElements.forEach(item => {
+        pool.appendChild(item);
+    });
+}
