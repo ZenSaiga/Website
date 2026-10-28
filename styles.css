@@ -1,25 +1,39 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100px;
+}
+
+
 /* Ito ang nag-didikta ng background color para sa navigation bar */
 .navbar {
-    background-color: #065524	;
-    /* Primary Navy */
+    background-color: #065524;
+   
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
- display: flex;                  /* Nag-a-ayos ng mga item nang magkatabi pahiga */
- flex-direction: row;           /* ito ay nags-start mula kaliwa hanggang kanan*/
- justify-content: flex-start;   /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
- align-items: center;           /* Inilalagay sa center ang mga item sa navigation list */
- list-style-type: none;         /* Tinatanggal ang mga bullet point sa listahan */
- margin: 0;                     /* Inaalis ang mga default na margin sa browser */
- padding: 0;                    /* Inaalis ang mga default na padding sa browser */
+   display: flex;               /* Nag-a-ayos ng mga item nang magkatabi pahiga */
+   flex-direction: row;         /* ito ay nags-start mula kaliwa hanggang kanan*/
+   justify-content: flex-start; /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
+   align-items: center;         /* Inilalagay sa center ang mga item sa navigation list */
+   list-style-type: none;       /* Tinatanggal ang mga bullet point sa listahan */
+   margin: 0;                   /* Inaalis ang mga default na margin sa browser */
+   padding: 0;                  /* Inaalis ang mga default na padding sa browser */
 }
 
 .nav-link {
     display: block;             /* Ito ay yung pinapalawak ang clickable na box para mapunan ang padding*/
     padding: 14px 20px;         /* Naglalagay ng espasyo sa loob ng target box  */
-    color: #FFFFFF;           /* Naglalagay ng kulay sa mga text */
+    color: #FFFFFF;             /* Naglalagay ng kulay sa mga text */
     text-decoration: none;      /* Inaalis ang mga standard underline */
     font-family: 'Segoe UI', sans-serif;
     font-size: 15px;
@@ -60,7 +74,33 @@
 
 /* Ito ang page-highlight class */
 .nav-link.active {
-    background-color: #328b4e;;
+    background-color: #328b4e;
     border-bottom: 4px solid #ff6207;
 }
 
+
+.links {
+    width: 60%;
+    display: block;
+    margin: 7px auto;
+    color: #c46314;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px;
+    border: 2px solid #c55c16;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.box {
+    color: rgb(194, 92, 33);
+    font-size: 0.7rem;
+    background-color: lightyellow;
+}
+
+.container { 
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+}
