@@ -2,7 +2,7 @@
 .navbar {
     background-color: #065524	;
     /* Primary Navy */
-    width: 110%;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -63,15 +63,4 @@
     background-color: #328b4e;;
     border-bottom: 4px solid #ff6207;
 }
-footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 85%;
-            background-color: #1b4d3e;
-            color: white;
-            padding: 12px;
-            text-align: center;
-            border-top: 3px solid #e07a5f;
-  }
 
