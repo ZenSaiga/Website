@@ -18,9 +18,8 @@ h1 {
 }
 
 .p {
-    color:#6b4f3b;
+    color: #6b4f3b;
 }
-
 
 .game-status {
     font-size: 1.1rem;
@@ -36,7 +35,6 @@ h1 {
 #scores {
     color: #0d47a1;
 }
-
 
 .dragable-container {
     display: flex;
@@ -66,7 +64,6 @@ h1 {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-
 .box {
     width: 150px;
     height: 65px;
@@ -93,7 +90,6 @@ h1 {
     opacity: 0.4;
 }
 
-
 .dropable {
     width: 160px;
     height: 120px;
@@ -117,6 +113,22 @@ h1 {
     color: #827717;
 }
 
+.home-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    background: #8d6e63;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.home-btn:hover {
+    background: #6d4c41;
+}
 
 .reset-btn {
     padding: 10px 25px;
