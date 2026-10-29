@@ -23,7 +23,7 @@ body {
 .nav-list {
    display: flex;               /* Nag-a-ayos ng mga item nang magkatabi pahiga */
    flex-direction: row;         /* ito ay nags-start mula kaliwa hanggang kanan*/
-   justify-content: center;     /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
+   justify-content: center; /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
    align-items: center;         /* Inilalagay sa center ang mga item sa navigation list */
    list-style-type: none;       /* Tinatanggal ang mga bullet point sa listahan */
    margin: 0;                   /* Inaalis ang mga default na margin sa browser */
@@ -79,17 +79,37 @@ body {
 }
 
 
+.container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
 .links {
-    width: 60%;
+    width: 200px; 
     display: block;
-    margin: 7px auto;
     color: #c46314;
     text-decoration: none;
     font-weight: bold;
-    padding: 7px;
+    padding: 12px;
     border: 2px solid #c55c16;
     text-align: center;
     border-radius: 8px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+
+.links:hover {
+    background-color: #fff4d1;  
+    border-color: #a34e0e;  
+}
+
+.links:hover h3 {
+    color: #933f07;     
 }
 
 .box {
@@ -97,9 +117,59 @@ body {
     font-size: 0.7rem;
     background-color: lightyellow;
 }
+.footer {
+    background-color: #e8f5e9; 
+    color: #1b5e20;        
+    font-family: "Segoe UI", sans-serif;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
 
-.container { 
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 8%;
+    height: 190px;
+}
+
+.footer-text {
+    width: 50%;
+}
+
+.footer-text p {
+    margin: 10px 15px;
+    font-size: 12px;
+}
+
+.footer-social {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.social-links {
+    display: flex;
     justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #065524;           
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #1e833e;           
+}
+
+.footer-bottom {
+    background-color: #043e1a; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
 }
