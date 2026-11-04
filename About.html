@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+  <style>
+    .ui-accordion-header{
+   background: #09ad48;
+   color:rgb(4, 54, 12);
+}
+    .ui-accordion-content {  
+    width: 100%;  
+    background-color: #d5e9cc;  
+    color: #142e04;  
+    font-size: 10pt;  
+    line-height: 16pt;  
+}  
+  </style>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
@@ -16,9 +38,22 @@
         <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-    <center>
-        <h1>About</h1>
-    </center>
+    <div id="accordion">
+  <h3>Achivements</h3>
+  <div>
+    <p>1.Platinum Trophy on Terraria, Metro 2033 Redux, Metro Last Light Redux</p>
+    <p>2.2025 & 2026 Champions in Codm Intramurals</p>
+    <p>3.Top 10 Finalists in DSPC 2026</p>
+    </div>
+  <h3>My Favorite Artist</h3>
+  <div>
+    <p>Yoasobi<br>FLOW<br>Yorushika<br>SCANDAL<br>KanaBoon<br>Back Number<br>Penthouse</p>
+  </div>
+  <h3>My Favorite Games</h3>
+  <div>
+    <p>1.Monster Hunter<br>2. Terraria<br>3. Resident Evil<br>4.God Eater<br></p>
+  </div>
+</div>
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-text">
