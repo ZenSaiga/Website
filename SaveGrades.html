@@ -6,54 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grades</title>
     <style>
-        table, th, td{
+        table,
+        th,
+        td {
             border: 1px solid green;
             border-collapse: collapse;
-            padding : 5px;
+            padding: 5px;
         }
-        #message{
+
+        #message {
             color: darkgreen;
             margin-top: auto;
         }
+        
     </style>
 </head>
 
 <body>
     <center>
-    <div class="form-container">
-        <label for="txtLRN">LRN </label>
-        <input type="text" id="txtLRN">
+        <div class="form-container">
+            <label for="txtLRN">LRN </label>
+            <input type="text" id="txtLRN">
 
-         <label for="txtSection">Section</label>
-        <input type="text" id="txtSection">
+            <label for="txtSection">Section</label>
+            <input type="text" id="txtSection">
 
-        <label for="txtName">Name </label>
-        <input type="text" id="txtName">
+            <label for="txtName">Name </label>
+            <input type="text" id="txtName">
 
-        <label for="txtSubject">Subject </label>
-        <input type="text" id="txtSubject">
+            <label for="txtSubject">Subject </label>
+            <input type="text" id="txtSubject">
 
-        <label for="txtGrade">Grade </label>
-        <input type="text" id="txtGrade" style="width: 60px;">
+            <label for="txtGrade">Grade </label>
+            <input type="text" id="txtGrade" style="width: 60px;">
 
-        <button id="btnSave">Save</button>
-    </div>
+            <button id="btnSave">Save</button>
+        </div>
 
-    <div id="message"></div>
-    <table border="1">
-        <tr>
-            <th>LRN</th>
-            <th>Section</th>
-            <th>Name</th>
-            <th>Subject</th>
-            <th>Grade</th>
-        </tr>
-        <tbody id="tableBody"></tbody>
-    </table>
-</center>
+        <div id="message"></div>
+        <table border="1">
+            <tr>
+                <th>LRN</th>
+                <th>Section</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Grade</th>
+            </tr>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </center>
     <script>
         var txtLRN = document.getElementById("txtLRN");
-         var txtSection = document.getElementById("txtSection");
+        var txtSection = document.getElementById("txtSection");
         var txtName = document.getElementById("txtName");
         var txtSubject = document.getElementById("txtSubject");
         var txtGrade = document.getElementById("txtGrade");
@@ -61,36 +65,66 @@
         var tableBody = document.getElementById("tableBody");
         var message = document.getElementById("message");
         var grades = JSON.parse(localStorage.getItem("grades")) || [];
-
+        var selectedIndex = -1;
         function showGrades() {
             tableBody.textContent = "";
             for (var i = 0; i < grades.length; i++) {
                 var row = tableBody.insertRow();
                 row.insertCell().textContent = grades[i].lrn;
-                 row.insertCell().textContent = grades[i].section;
+                row.insertCell().textContent = grades[i].section;
                 row.insertCell().textContent = grades[i].name;
                 row.insertCell().textContent = grades[i].subject;
                 row.insertCell().textContent = grades[i].grade;
+                var actionCell = row.insertCell();
+                actionCell.appendChild(makeUpdateButton(i));
 
+                function makeUpdateButton(index) {
+                    var button = document.createElement("button");
+                    button.textContent = "update";
+                    button.addEventListener("click", function () {
+                        loadForUpdate(index);
+                    })
+                    return button;
+                }
+                function loadForUpdate(index) {
+                    selectedIndex = index;
 
+                    txtLRN.value = grades[index].lrn;
+                    txtSection.value = grades[index].section;
+                    txtName.value = grades[index].name;
+                    txtSubject.value = grades[index].subject;
+                    txtGrade.value = grades[index].grade;
+                    btnSave.value = "Update";
+                    message.textContent = "Change the values, then click the update button above the table.";
+
+                }
             }
         }
         function saveGrade() {
             var lrn = txtLRN.value.trim();
-             var section = txtSection.value.trim();
+            var section = txtSection.value.trim();
             var name = txtName.value.trim();
             var subject = txtSubject.value.trim();
-            var grade = txtGrade.value.trim();
+            var grade = txtGrade.value.trim()
             if (lrn === "" || section === "" || name === "" || subject === "" || grade === "") {
                 message.textContent = "Please bro fill in all the boxes.";
                 return;
             }
             var record = { lrn: lrn, section: section, name: name, subject: subject, grade: grade };
-            grades.push(record);
+            if (selectedIndex === -1){
+                 grades.push(record);
+                 message.textContent = "Saved";
+            
+        }else{
+            grades[selectedIndex] = record;
+            message.textContent = "Updated";
+            selectedIndex = -1;
+            btnSave.value = "save";
+        }
             localStorage.setItem("grades", JSON.stringify(grades));
             message.textContent = "saved";
             txtLRN.value = "";
-             txtSection.value = "";
+            txtSection.value = "";
             txtName.value = "";
             txtSubject.value = "";
             txtGrade.value = "";
@@ -98,7 +132,7 @@
         }
         btnSave.addEventListener("click", saveGrade);
         showGrades();
-        
+
     </script>
 </body>
 
