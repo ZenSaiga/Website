@@ -18,13 +18,11 @@
             color: darkgreen;
             margin-top: auto;
         }
-        
     </style>
 </head>
 
 <body>
     <center>
-     <a href = "index.html"> Home </a>
         <div class="form-container">
             <label for="txtLRN">LRN </label>
             <input type="text" id="txtLRN">
@@ -40,7 +38,6 @@
 
             <label for="txtGrade">Grade </label>
             <input type="text" id="txtGrade" style="width: 60px;">
-
             <button id="btnSave">Save</button>
         </div>
 
@@ -78,6 +75,7 @@
                 row.insertCell().textContent = grades[i].grade;
                 var actionCell = row.insertCell();
                 actionCell.appendChild(makeUpdateButton(i));
+                actionCell.appendChild(makeDeleteButton(i));
 
                 function makeUpdateButton(index) {
                     var button = document.createElement("button");
@@ -85,6 +83,14 @@
                     button.addEventListener("click", function () {
                         loadForUpdate(index);
                     })
+                    return button;
+                }
+                function makeDeleteButton(index) {
+                    var button = document.createElement("button");
+                    button.textContent = "Delete";
+                    button.addEventListener("click", function () {
+                        deleteGrade(index);
+                    });
                     return button;
                 }
                 function loadForUpdate(index) {
@@ -101,6 +107,28 @@
                 }
             }
         }
+
+        function deleteGrade(index){
+            var sure = confirm("Delete record of " + grades[index].name + "?");
+            if (!sure){
+                return;
+            }
+            grades.splice(index, 1);
+            if (selectedIndex === index){
+                selectedIndex = -1;
+                btnSave.value = "Save";
+                txtLRN.value = "";
+                txtSection.value = "";
+                txtName.value = "";
+                txtSubject.value = "";
+                txtGrade.value = "";
+            }else if(selectedIndex > index){
+                selectedIndex = selectedIndex -1;
+            }
+            localStorage.setItem("grades",JSON.stringify(grades));
+            message.textContent = "Deleted";
+            showGrades();
+        }
         function saveGrade() {
             var lrn = txtLRN.value.trim();
             var section = txtSection.value.trim();
@@ -112,16 +140,16 @@
                 return;
             }
             var record = { lrn: lrn, section: section, name: name, subject: subject, grade: grade };
-            if (selectedIndex === -1){
-                 grades.push(record);
-                 message.textContent = "Saved";
-            
-        }else{
-            grades[selectedIndex] = record;
-            message.textContent = "Updated";
-            selectedIndex = -1;
-            btnSave.value = "save";
-        }
+            if (selectedIndex === -1) {
+                grades.push(record);
+                message.textContent = "Saved";
+
+            } else {
+                grades[selectedIndex] = record;
+                message.textContent = "Updated";
+                selectedIndex = -1;
+                btnSave.value = "save";
+            }
             localStorage.setItem("grades", JSON.stringify(grades));
             message.textContent = "saved";
             txtLRN.value = "";
@@ -133,6 +161,8 @@
         }
         btnSave.addEventListener("click", saveGrade);
         showGrades();
+
+    
 
     </script>
 </body>
