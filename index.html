@@ -1,131 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        
-        .welcome-section {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-        .intro-box {
-            background-color: #e8f5e9;
-            border: 2px solid #065524;
-            border-radius: 10px;
-            padding: 40px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        .intro-box h1 {
-            color: #065524;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-        .intro-box h2 {
-            color: #1F3864;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .intro-box p {
-            color: #333;
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .action-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .main-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #065524;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: background-color 0.2s ease;
-        }
-        .main-btn:hover {
-            background-color: #1e833e;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home </title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #f4f6fa;
+      margin: 0;
+      padding: 0;
+    }
 
-        .outline-btn {
-            background-color: transparent;
-            color: #065524;
-            border: 2px solid #065524;
-        }
+    .home-container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
 
-        .outline-btn:hover {
-            background-color: #065524;
-            color: white;
-        }
-    </style>
+    .main-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: #1F3864;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #c55c16;
+      margin-bottom: 35px;
+      letter-spacing: 1px;
+    }
+
+    .content-box {
+      background-color: #e8f5e9;
+      border: 2px solid #065524;
+      border-radius: 12px;
+      padding: 35px 40px;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .content-box h3 {
+      color: #065524;
+      font-size: 1.4rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .content-box p {
+      color: #333333;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .content-box h4 {
+      color: #065524;
+      font-size: 1.15rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-left: 4px solid #ff6207;
+      padding-left: 10px;
+    }
+  </style>
 </head>
-
 <body>
 
-   
-    <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <main class="welcome-section">
-        <div class="intro-box">
-            <h1>Julius Bergado</h1>
-            <h2>Grade 12-Cooper | TVL-ICT Computer Programming</h2>
-            <p>
-                Welcome to my personal digital hub! I am a student programmer, gamer, and artist passionate about
-                building interactive web applications, solving coding drills, and exploring creative designs.
-                Feel free to browse around to see my projects, gallery, and background.
-            </p>
-            <div class="action-links">
-                <a href="Portfolio.html" class="main-btn">View Portfolio</a>
-                <a href="About.html" class="main-btn outline-btn">About Me</a>
-            </div>
+  <main class="home-container">
+    <h1 class="main-title">JULIUS CEAZAR S. BERGADO</h1>
+    <div class="subtitle">12 - COOPER</div>
+
+    <div class="content-box">
+      <h3>Welcome to My Personal Website!</h3>
+      <p>
+        Hello! I'm Julius Ceazar S. Bergado, a Graduating TVL-ICT Computer Programming student at GJRRSHS. This personal website serves as my central hub to showcase my web projects, creative works, and tech journey.
+      </p>
+
+      <h4>About this Website</h4>
+      <p>
+        Built from scratch using HTML, CSS, and JavaScript, this portfolio highlights my programming drills and design projects. Take a look around and enjoy exploring my work!
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        <h3>Stay Connected!</h3>
+        <p>
+          "Thank you for visiting my website. Connect with me on social media
+          or reach out via email for collaborations and inquiries. Your
+          support and feedback are greatly appreciated."
+        </p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/">f</a>
+          <a href="https://www.youtube.com/">▶</a>
+          <a href="https://www.linkedin.com/">in</a>
         </div>
-    </main>
-
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-text">
-                <h3>Stay Connected!</h3>
-                <p>
-                    "Thank you for visiting my website. Connect with me on social media
-                    or reach out via email for collaborations and inquiries. Your
-                    support and feedback are greatly appreciated."
-                </p>
-            </div>
-            <div class="footer-social">
-                <h3>Follow Me</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/">f</a>
-                    <a href="https://www.youtube.com/">▶</a>
-                    <a href="https://www.linkedin.com/">in</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>©2026 All rights Reserved | Designed by : Jujuber</p>
-        </div>
-    </footer>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©2026 All rights Reserved | Designed by : Jujuber</p>
+    </div>
+  </footer>
 
 </body>
-
 </html>
