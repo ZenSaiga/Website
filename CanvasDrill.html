@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+
+    <style>
+        #myDrawing {
+            border: solid 1px darkgreen;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: whitesmoke;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <canvas height="500" width="1000" id="myDrawing">
+    </canvas>
+    <script>
+        const canvas = document.getElementById("myDrawing");
+        const ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(500, 50);
+        ctx.lineTo(400, 200);
+        ctx.lineTo(600, 200);
+        ctx.lineTo(500, 50);
+
+        ctx.fillStyle = '#03CC28';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(550, 200);
+        ctx.lineTo(600, 300);
+        ctx.lineTo(400, 300);
+        ctx.lineTo(450, 200);
+
+        ctx.fillStyle = '#03CC28';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(460, 300);
+        ctx.lineTo(460, 350);
+        ctx.lineTo(500, 350);
+        ctx.lineTo(550, 350);
+        ctx.lineTo(550, 300);
+
+        ctx.fillStyle = '#665124';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(500, 20);
+        ctx.lineTo(507, 37);
+        ctx.lineTo(525, 37);
+        ctx.lineTo(511, 48);
+        ctx.lineTo(516, 65);
+        ctx.lineTo(500, 55);
+        ctx.lineTo(484, 65);
+        ctx.lineTo(489, 48);
+        ctx.lineTo(475, 37);
+        ctx.lineTo(493, 37);
+        ctx.closePath();
+
+        ctx.fillStyle = '#FFD700';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(500, 120, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#FF0000';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.arc(470, 170, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#FFD700';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(530, 170, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#1E90FF';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.arc(450, 260, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#FF0000';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.arc(500, 240, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#FF1493';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.arc(550, 260, 10, 0, Math.PI * 2);
+        ctx.fillStyle = '#FFD700';
+        ctx.fill();
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    </script>
+    <h1>Merry Christmas!</h1>
+
+</body>
+
+</html>
