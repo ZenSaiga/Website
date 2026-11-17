@@ -10,7 +10,6 @@ body {
     min-height: 100px;
 }
 
-
 /* Ito ang nag-didikta ng background color para sa navigation bar */
 .navbar {
     background-color: #065524;
@@ -21,7 +20,7 @@ body {
 .nav-list {
    display: flex;             /* Nag-a-ayos ng mga item nang magkatabi pahiga */
    flex-direction: row;       /* ito ay nags-start mula kaliwa hanggang kanan*/
-   justify-content: center; /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
+   justify-content: center;   /* Pinagsasama-sama ang mga item patungo sa simula ng menu*/
    align-items: center;         /* Inilalagay sa center ang mga item sa navigation list */
    list-style-type: none;       /* Tinatanggal ang mga bullet point sa listahan */
    margin: 0;                   /* Inaalis ang mga default na margin sa browser */
@@ -76,7 +75,6 @@ body {
     border-bottom: 4px solid #ff6207;
 }
 
-
 .container { 
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +98,6 @@ body {
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-
 .links:hover {
     background-color: #fff4d1;  
     border-color: #a34e0e;  
@@ -116,7 +113,6 @@ body {
     background-color: lightyellow;
 }
 
-
 .footer {
     background-color: #e8f5e9; 
     color: #1b5e20;         
@@ -130,7 +126,6 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 12px 8%; 
-  
 }
 
 .footer-text {
