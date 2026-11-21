@@ -6,53 +6,17 @@
   <title>About</title>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about.css">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
   <script>
     $(function() {
       $("#accordion").accordion({
-        collapsible: true
+        collapsible: true,
+        heightStyle: "content"
       });
     });
   </script>
-  <style>
-  #accordion {
-    max-width: 700px;
-    margin: 40px auto;
-  }
-
-  .ui-accordion-header {
-    background: #0c5c26;
-    color: #ffffff;
-    border: 1px solid #08421b;
-    font-weight: bold;
-  }
-
-
-  .ui-accordion-header:hover {
-    background: #147a35;
-    color: #ffffff;
-  }
-
-
-  .ui-accordion-header.ui-state-active {
-    background: #238636;
-    color: #ffffff;
-    border-bottom: 3px solid #ff6600;
-  }
-
-  .ui-accordion-header .ui-icon {
-    filter: brightness(0) invert(1);
-  }
-
-  .ui-accordion-content {
-    background-color: #e4f2e6;
-    color: #0c3b19;
-    border: 1px solid #0c5c26;
-    font-size: 10.5pt;
-    line-height: 16pt;
-  }
-  </style>
 </head>
 <body>
   <nav class="navbar" role="navigation" aria-label="Main Navigation">
@@ -65,42 +29,85 @@
     </ul>
   </nav>
 
-  <div id="accordion">
-    <h3>About Me</h3>
-    <div>
-      <p>I am a Graduating Student in Gov. Juanito Reyes Remulla SHS who loves playing video games, Drawing, Painting, and sleeping.</p>
-    </div>
-    <h3>Achivements</h3>
-    <div>
-      <ol>
-        <li>Platinum Trophy on games like Terraria, Metro 2033 Redux, Metro Last Light Redux</li>
-        <li>2025 & 2026 Champions in Codm Intramurals</li>
-        <li>Top 10 Finalists in DSPC 2026</li>
-      </ol>
-    </div>
-    <h3>Favorite Artist</h3>
-    <div>
-      <ul>
-        <li>YOASOBI</li>
-        <li>Penthouse</li>
-        <li>FLOW</li>
-        <li>Yorushika</li>
-        <li>SCANDAL</li>
-        <li>KanaBoon</li>
-        <li>Back Number</li>
-      </ul>
-    </div>
-    <h3>My Favorite Games</h3>
-    <div>
-      <ol>
-        <li>Monster Hunter</li>
-        <li>Terraria</li>
-        <li>Resident Evil</li>
-        <li>God Eater</li>
-        <li>Dying light</li>
-      </ol>
-    </div>
-  </div>
+  <main class="about-wrapper">
+    <aside class="profile-card">
+      <img src="image/pic1.png" alt="Jujuber Profile Picture">
+      <h2>Jujuber</h2>
+      <div class="subtitle">ICT - Computer Programming | Grade 12</div>
+      <p>
+        I am a Graduating Student in Gov. Juanito Reyes Remulla SHS who loves playing video games, Drawing, Painting, and sleeping.
+      </p>
+      <div class="badge-container">
+        <span class="badge"> Coding</span>
+        <span class="badge"> Digital Art</span>
+        <span class="badge"> Gaming</span>
+        <span class="badge"> Sleeping</span>
+      </div>
+    </aside>
+
+
+    <section class="accordion-section">
+      <div id="accordion">
+        <h3>Goals</h3>
+        <div>
+          <p>Is to finish College and becoming animator, pro player or streamer, 
+            and also having a tomboy muscle MOMMY(in my dreams lol)</p>
+        </div>
+        <h3>Achievements</h3>
+        <div>
+          <ol>
+            <li>Platinum Trophy on games like Terraria, Metro 2033 Redux, Metro Last Light Redux</li>
+            <li>2025 & 2026 Champions in CODM Intramurals</li>
+            <li>Top 10 Finalists in DSPC 2026</li>
+          </ol>
+        </div>
+        <h3>Favorite Artists</h3>
+        <div>
+          <ul>
+            <li>YOASOBI</li>
+            <li>T.M Revolution</li>
+             <li>FatRat</li>
+             <li>Porter Robinson</li>
+             <li>Neovaii</li>
+            <li>Penthouse</li>
+            <li>FLOW</li>
+            <li>Yorushika</li>
+            <li>SCANDAL</li>
+            <li>KanaBoon</li>
+            <li>Back Number</li>
+          </ul>
+        </div>
+        <h3>Favorite Animated Shows & Movie</h3>
+        <div>
+          <ul>
+            <li>Naruto & Naruto Shippuden</li>
+            <li>Godzilla Minus One</li>
+            <li>Gurren Laggan</li>
+            <li>JoJo's Bizzare Adventure</li>
+            <li>Invincible</li>
+            <li>Code Geass: Lelouch the Rebellion</li>
+            <li>Mobile Suit Gundam: Seed</li>
+            <li>That time i reincarnated as a slime</li>
+            <li>Konosuba</li>
+            <li>Shangri-La Frontier</li>
+            <li>Grand Blue Dreaming</li>
+            <li>My Hero Academia</li>
+            <li>Love is War</li>
+          </ul>
+        </div>
+        <h3>My Favorite Games</h3>
+        <div>
+          <ol>
+            <li>Monster Hunter</li>
+            <li>Terraria</li>
+            <li>Resident Evil</li>
+            <li>God Eater</li>
+            <li>Dying Light</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-content">
