@@ -4,43 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menuStyle.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: whitesmoke;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #065524;
+            margin: 32px 16px 8px;
+            font-weight: 700;
+        }
+
+        .contacs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 820px;
+            width: calc(100% - 32px);
+            margin: 24px auto 48px;
+        }
+
+        .contac {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 24px 30px;
+            border-radius: 12px;
+            border: 2px solid #09ad48;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contac:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(6, 85, 36, 0.1);
+        }
+
+        .plaform {
+            margin: 0;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            color: #ff6207; 
+        }
+
+        .label {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #1b3b24;
+            word-break: break-word;
+        }
+
+        footer {
+            background-color: #043e1a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link active" href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <center>
-        <h1>Contacts</h1>
-    </center>
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-text">
-          <h3>Stay Connected!</h3>
-          <p>
-            "Thank you for visiting my website. Connect with me on social media
-            or reach out via email for collaborations and inquiries. Your
-            support and feedback are greatly appreciated."  
-          </p>
-        </div>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="footer-social">
-          <h3>Follow Me</h3>
-          <div class="social-links">
-            <a href="https://www.facebook.com/">f</a>
-            <a href="https://www.youtube.com/">▶</a>
-            <a href="https://www.linkedin.com/">in</a>
-          </div>
-        </div>
-      </div>
+    <main>
+        <h1>Get in Touch</h1>
 
-      <div class="footer-bottom">
-        <p>©2026 All rights Reserved | Designed by : Jujuber</p>
+        <div class="contacs">
+            <div class="contac">
+                <p class="plaform">Email Address</p>
+                <p class="label">jcbergado728@gmail.com</p>
+            </div>
+
+            <div class="contac">
+                <p class="plaform">FaceBook Name</p>
+                <p class="label">Julius Ceazar S. Bergado</p>
+            </div>
+
+            <div class="contac">
+                <p class="plaform">PHONE NUMBER</p>
+                <p class="label">+09 676 67420</p>
+            </div>
+
+            <div class="contac">
+                <p class="plaform">Address</p>
+                <p class="label">Agartha Kingdom</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 All rights Reserved | Designed by : Jujuber</p>
+    </footer>
 </body>
 </html>
