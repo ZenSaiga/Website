@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact - Julius Ceazar S. Bergado</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -35,7 +35,7 @@
             font-weight: 700;
         }
 
-        .contacs {
+        .contact-container {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -45,7 +45,7 @@
             margin: 24px auto 48px;
         }
 
-        .contac {
+        .contact-item {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -59,12 +59,12 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .contac:hover {
+        .contact-item:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(6, 85, 36, 0.1);
         }
 
-        .plaform {
+        .contact-type {
             margin: 0;
             font-size: 13px;
             font-weight: bold;
@@ -72,7 +72,7 @@
             color: #ff6207; 
         }
 
-        .label {
+        .contact-detail {
             margin: 0;
             font-size: 1.2rem;
             font-weight: 500;
@@ -106,25 +106,25 @@
     <main>
         <h1>Get in Touch</h1>
 
-        <div class="contacs">
-            <div class="contac">
-                <p class="plaform">Email Address</p>
-                <p class="label">jcbergado728@gmail.com</p>
+        <div class="contact-container">
+            <div class="contact-item">
+                <p class="contact-type">EMAIL ADDRESS</p>
+                <p class="contact-detail">jcbergado728@gmail.com</p>
             </div>
 
-            <div class="contac">
-                <p class="plaform">FaceBook Name</p>
-                <p class="label">Julius Ceazar S. Bergado</p>
+            <div class="contact-item">
+                <p class="contact-type">FACEBOOK NAME</p>
+                <p class="contact-detail">Julius Ceazar S. Bergado</p>
             </div>
 
-            <div class="contac">
-                <p class="plaform">PHONE NUMBER</p>
-                <p class="label">+09 676 67420</p>
+            <div class="contact-item">
+                <p class="contact-type">PHONE NUMBER</p>
+                <p class="contact-detail">+09 676 67420</p>
             </div>
 
-            <div class="contac">
-                <p class="plaform">Address</p>
-                <p class="label">Agartha Kingdom</p>
+            <div class="contact-item">
+                <p class="contact-type">ADDRESS</p>
+                <p class="contact-detail">Agartha Kingdom</p>
             </div>
         </div>
     </main>
