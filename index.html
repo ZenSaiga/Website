@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home </title>
+  <title>Home</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
+  
       background-color: #f4f6fa;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .home-container {
       max-width: 850px;
+      width: 100%;
       margin: 40px auto;
       padding: 0 20px;
       text-align: center;
+      flex: 1; 
+      box-sizing: border-box;
     }
 
     .main-title {
@@ -71,22 +77,23 @@
 </head>
 <body>
 
-
-  <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <ul class="nav-list">
-      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
-      <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main class="home-container">
     <h1 class="main-title">JULIUS CEAZAR S. BERGADO</h1>
     <div class="subtitle">12 - COOPER</div>
 
-    <div class="content-box">
+    <section class="content-box">
       <h3>Welcome to My Personal Website!</h3>
       <p>
         Hello! I'm Julius Ceazar S. Bergado, a Graduating TVL-ICT Computer Programming student at GJRRSHS. This personal website serves as my central hub to showcase my web projects, creative works, and tech journey.
@@ -96,7 +103,7 @@
       <p>
         Built from scratch using HTML, CSS, and JavaScript, this portfolio highlights my programming drills and design projects. Take a look around and enjoy exploring my work!
       </p>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
