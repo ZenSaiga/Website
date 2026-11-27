@@ -30,12 +30,12 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      align-items: center;
+      align-items: stretch;
       justify-content: space-between;
     }
 
     .home-intro {
-      flex: 1 1 500px;
+      flex: 1 1 520px;
       background: linear-gradient(135deg, #043e1a 0%, #065524 100%);
       color: #ffffff;
       padding: 45px 40px;
@@ -47,7 +47,6 @@
       align-items: flex-start;
     }
 
-    /* Profile Image Styling */
     .intro-avatar {
       width: 90px;
       height: 90px;
@@ -56,6 +55,7 @@
       border: 3px solid #09ad48;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
+      background-color: #043e1a;
     }
 
     .home-intro h2 {
@@ -65,7 +65,7 @@
     }
 
     .home-intro h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       font-weight: 700;
       margin: 0 0 12px 0;
       color: #ffffff;
@@ -75,19 +75,81 @@
       display: inline-block;
       background-color: #09ad48;
       color: #ffffff;
-      font-size: 0.95rem;
-      font-weight: bold;
-      padding: 6px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 5px 12px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       letter-spacing: 0.05em;
     }
 
     .home-intro p {
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.7;
       color: #e2e8f0;
-      margin: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .badge {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #a8d5ba;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      justify-content: center;
+      border: 1px solid rgba(168, 213, 186, 0.2);
+    }
+
+    
+    .intro-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .btn-primary, .btn-outline {
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #ff6207;
+      color: #ffffff;
+      border: 2px solid #ff6207;
+      box-shadow: 0 4px 12px rgba(255, 98, 7, 0.3);
+    }
+
+    .btn-primary:hover {
+      background-color: #e55705;
+      border-color: #e55705;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: #ffffff;
+      transform: translateY(-2px);
     }
 
     .home-nav-links {
@@ -102,31 +164,31 @@
       border: 2px solid #e2e8f0;
       border-left: 6px solid #09ad48;
       border-radius: 12px;
-      padding: 16px 22px;
+      padding: 18px 22px;
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
     }
 
     .nav-card:hover {
       border-color: #09ad48;
       transform: translateX(6px);
-      box-shadow: 0 6px 15px rgba(6, 85, 36, 0.08);
+      box-shadow: 0 6px 18px rgba(6, 85, 36, 0.1);
       background-color: #f0fdf4;
     }
 
     .nav-card h3 {
       color: #065524;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       margin: 0 0 4px 0;
       font-weight: 600;
     }
 
     .nav-card p {
       color: #64748b;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       margin: 0;
     }
 
@@ -142,7 +204,7 @@
   <header>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
       <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="Portfolio.html">Portfolio</a></li>
@@ -153,16 +215,34 @@
 
   <main>
     <div class="home-split-container">
+      
+   
       <section class="home-intro">
-
+      
         <img src="imeji/Me.png" alt="Julius Ceazar S. Bergado" class="intro-avatar">
         
         <h2>Welcome, I am</h2>
         <h1>Julius Ceazar S. Bergado</h1>
         <div class="role-tag">12 - Cooper | ICT Programming</div>
+        
         <p>
           Hello! This digital hub showcases my programming drills, web development projects, and creative works built entirely from scratch using semantic HTML, CSS Flexbox, and JavaScript. Explore the sections to see my technical journey.
         </p>
+
+  
+        <div class="tech-badges">
+          
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">JavaScript</span>
+         
+        </div>
+
+
+        <div class="intro-cta">
+          <a href="Portfolio.html" class="btn-primary">Explore Work</a>
+          <a href="Contact.html" class="btn-outline">Get in Touch</a>
+        </div>
       </section>
 
 
@@ -187,6 +267,7 @@
           <p>Get in touch for collaborations or inquiries</p>
         </a>
       </nav>
+
     </div>
   </main>
 
